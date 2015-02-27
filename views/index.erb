@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grocery List</title>
+  </head>
+
+  <body>
+    <h1>Grocery List</h1>
+
+    <ul>
+      <% grocery.each do |hash| %>
+        <li><%= hash["item"] %></li>
+      <% end %>
+    </ul>
+
+    <form action=groceries method=post onsubmit="return checkvalue(this)">
+      <input type="text" name="item" id="item">
+      <button type="submit" formaction="/groceries" value="check value">add</button>
+    </form>
+    
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/grocery_list.js"></script>
+  </body>
+</html>
